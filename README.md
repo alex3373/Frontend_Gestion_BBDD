@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Gestión de Ventas – Frontend
 
-## Getting Started
+Interfaz web desarrollada en **Next.js + TypeScript**, conectada a una API Node.js desplegada en **Oracle Cloud**.  
+Permite visualizar datos de ventas, vendedores, clientes y reportes generados por la base de datos **Oracle PL/SQL**.  
+---
 
-First, run the development server:
+## Demo en línea
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+**Frontend activo:** [oracle-dashboard.0003333.xyz](https://oracle-dashboard.0003333.xyz)  
+**API conectada:** [api.0003333.xyz](https://api.0003333.xyz)
+
+> El frontend está alojado en **Firebase Hosting** y consume datos en tiempo real desde el backend desplegado en una **VM de Oracle Cloud**.
+
+---
+
+## Repositorios Relacionados
+
+- [Backend (Node.js + Oracle Cloud)](https://github.com/alex3373/Oracle_Gestion_API)
+- [Base de datos PL/SQL](https://github.com/alex3373/BBDD_SQL-PLSQL)
+
+---
+
+## Tecnologías Utilizadas
+
+| Capa | Tecnología |
+|------|-------------|
+| Framework | Next.js (App Router) |
+| Lenguaje | TypeScript |
+| Estilos | Tailwind CSS |
+| Animaciones | Framer Motion |
+| Despliegue | Firebase Hosting |
+| Integración | Fetch API hacia backend REST (Oracle Cloud) |
+
+---
+
+## Arquitectura General
+
+```mermaid
+graph LR
+  A([Frontend - NextJS - Firebase Hosting]) --> B[[API - NodeJS - Oracle Cloud VM]]
+  B --> C[(Oracle Database - Oracle Cloud)]
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Autor
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Alexis Córdova Díaz**  
+Analista Programador | Desarrollador Full Stack  
+📧 alexisandres311@gmail.com  
+🌐 [linkedin.com/in/alexis-andres-cordova](https://linkedin.com/in/alexis-andres-cordova)
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
